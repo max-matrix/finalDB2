@@ -1,11 +1,11 @@
 -- b. Listar sólo los médicos que alquilaron más de un consultorio.
 
 SELECT 
-    id_medico as Medico,
-    nombre as Nombre,
-    apellido as Apellido,
-    telefono as Telefono,
-    fecha_nacimiento as 'Fecha de Nacimiento'
+    id_medico AS Medico,
+    nombre AS Nombre,
+    apellido AS Apellido,
+    telefono AS Telefono,
+    fecha_nacimiento AS 'Fecha de Nacimiento'
 FROM
     alquiler_consultorios
 INNER JOIN medicos 
