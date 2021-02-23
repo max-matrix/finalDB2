@@ -6,7 +6,11 @@
 -- NULL. ordenar por apellido y nombre de los médicos el listado.
 
 SELECT 
-medicos.id_medico, medicos.nombre, medicos.apellido, COUNT(idMedico) AS 'Cantidad de alquileres'
+	medicos.id_medico, 
+	medicos.nombre, 
+	medicos.apellido, 
+	COUNT(idMedico) AS 'Cantidad de alquileres', 
+	Min(fechaDesde) AS 'Fecha Alquiler Primer Consultorio'
 FROM alquiler_consultorios 
 RIGHT JOIN medicos
 ON alquiler_consultorios.idMedico = medicos.id_medico

@@ -7,9 +7,9 @@ SELECT
     telefono AS Telefono,
     fecha_nacimiento AS 'Fecha de Nacimiento'
 FROM
-    alquiler_consultorios
-INNER JOIN medicos 
-ON alquiler_consultorios.idMedico = medicos.id_medico 
+    alquiler_consultorios ac
+INNER JOIN medicos m
+ON ac.idMedico = m.id_medico 
 GROUP BY idMedico
 HAVING COUNT(idConsultorio) > 1;
 

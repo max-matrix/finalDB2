@@ -10,10 +10,10 @@ SELECT
     fechaDesde as 'Fecha Desde', 
     fechaHasta as 'Fecha Hasta',
     nombre_comercial as 'Nombre Comercial',
-    consultorios.telefono as Telefono,
+    c.telefono as Telefono,
     direccion as Direccion
-FROM medicos
-INNER JOIN alquiler_consultorios
-ON medicos.id_medico = alquiler_consultorios.idMedico
-INNER JOIN consultorios
-ON consultorios.id_consultorio = alquiler_consultorios.idConsultorio;
+FROM medicos m
+INNER JOIN alquiler_consultorios ac
+ON m.id_medico = ac.idMedico
+INNER JOIN consultorios c
+ON c.id_consultorio = ac.idConsultorio;
